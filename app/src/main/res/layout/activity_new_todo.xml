@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <ProgressBar
+        android:id="@+id/jsonPostingProgressBar"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/newTodoHeaderLayout"
+        android:fillViewport="true"
+        android:background="@color/backgroundColor"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        tools:context="com.example.android.planner.NewTodoActivity">
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Категория:"
+                android:textSize="20sp"
+                android:padding="12dp"/>
+            <Spinner
+                android:id="@+id/projectSpinner"
+                android:textSize="20sp"
+                android:padding="12dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+            </Spinner>
+        </LinearLayout>
+        <View
+            android:layout_height="1px"
+            android:layout_width="match_parent"
+            android:background="@color/systemShadow"
+            />
+        <ListView
+            android:id="@+id/projectList"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </ListView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/newTodoBottomLayout"
+        android:orientation="vertical"
+        android:background="@color/backgroundColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_height="1px"
+            android:layout_width="match_parent"
+            android:background="@color/systemShadow"/>
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:padding="15dp"
+            android:hint="@string/new_todo_hint"/>
+
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/backgroundColor">
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@color/placeholderColor"
+                android:id="@+id/buttoncancel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:text="@string/button_cancel_text"
+                android:textColor="@color/systemWhiteColor"
+                android:textSize="12sp"/>
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@color/accentColor"
+                android:id="@+id/buttoncreate"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:text="@string/button_create_text"
+                android:textColor="@color/systemWhiteColor"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

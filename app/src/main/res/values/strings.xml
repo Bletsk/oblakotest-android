@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Задачи</string>
+    <string name="title_activity_new_todo">NewTodoActivity</string>
+    <string name="server_address">https://fast-atoll-99527.herokuapp.com/</string>
+    <string name="new_todo_hint">Введите название новой задачи</string>
+    <string name="button_cancel_text">Отмена</string>
+    <string name="button_create_text">Создать</string>
+    <string name="load_error_text">Не удалось загрузить данные</string>
+    <string name="load_error_button_text">Повторить попытку</string>
+</resources>
