@@ -87,6 +87,13 @@ class CustomAdapter extends BaseAdapter {
                     holder.textView = (TextView) convertView.findViewById(R.id.text);
                     holder.cb = (CheckBox) convertView.findViewById(R.id.cb);
 
+                    convertView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            holder.cb.toggle();
+                        }
+                    });
+
                     holder.cb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                             JsonObject params;
